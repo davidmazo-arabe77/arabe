@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es" manifest="cache.appcache">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PS4 14.00 | Cargando GoldHEN</title>
+<!-- All visual assets are inline to avoid external network requests during the exploit. -->
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#030b08;color:#e7fff0;font-family:Arial,Helvetica,sans-serif}body{overflow-x:hidden;background:radial-gradient(ellipse at 50% 37%,#0c3826 0%,#061a13 43%,#020805 85%)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.23;background:repeating-linear-gradient(90deg,transparent 0,transparent 47px,#13ff7620 48px,transparent 49px),repeating-linear-gradient(0deg,transparent 0,transparent 43px,#13ff7612 44px,transparent 45px)}
+body:after{content:"";position:fixed;left:0;right:0;top:0;bottom:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0,transparent 3px,#0005 4px);opacity:.32}
+#brand{position:relative;z-index:2;text-align:center;padding:26px 12px 10px}#brand b{display:block;font-size:clamp(25px,4.5vw,54px);font-weight:900;letter-spacing:3px;color:#eafff1;text-shadow:0 0 16px #1bff74,0 4px 0 #07160b}#brand small{display:block;color:#7dfba6;font-size:12px;letter-spacing:5px;font-weight:bold;margin-top:4px}#brand .fw{display:inline-block;margin-top:12px;padding:5px 17px;border:1px solid #31e678;border-radius:30px;color:#b5ffd0;background:#0b2818;letter-spacing:2px;font-size:11px}
+.stage{position:relative;z-index:2;margin:15px auto 0;width:92%;max-width:690px;min-height:390px;border:1px solid #247e48;border-radius:20px;background:linear-gradient(145deg,#0a251aee,#04100cee);box-shadow:0 0 0 5px #071c14,0 0 45px #00ff6530,inset 0 0 36px #00ff5711;text-align:center;padding:24px 20px 26px}
+.stage:before,.stage:after{content:"";position:absolute;width:38px;height:38px;border:3px solid #45ff8a;filter:drop-shadow(0 0 8px #1fff7d)}.stage:before{top:-2px;left:-2px;border-right:0;border-bottom:0;border-radius:18px 0 0 0}.stage:after{right:-2px;bottom:-2px;border-left:0;border-top:0;border-radius:0 0 18px 0}
+#spin{width:110px;height:110px;margin:30px auto 30px;border:7px solid #194d30;border-top-color:#5bff98;border-right-color:#2ddd73;border-radius:50%;box-shadow:0 0 23px #15ff6955,inset 0 0 12px #14ff5620;animation:spin 1.05s linear infinite}.loading-title{font-size:22px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#dcffe8;text-shadow:0 0 12px #21ff7280}.loading-sub{font-size:13px;color:#8ce6aa;margin:8px 0 15px}.progress-track{height:7px;max-width:380px;margin:0 auto 14px;border-radius:20px;overflow:hidden;background:#123822;border:1px solid #235e37}.progress-glow{width:35%;height:100%;background:linear-gradient(90deg,transparent,#47ff88,#b4ffd1);border-radius:20px;animation:travel 2.2s ease-in-out infinite}.status{font-size:11px;color:#70c68e;letter-spacing:2px;font-weight:bold}
+#ramBox{position:relative;z-index:2;max-width:690px;margin:16px auto 0;padding:9px 15px;text-align:center;border:1px solid #22563a;border-radius:8px;background:#061b12;color:#8eeeb0;font:11px/1.5 Consolas,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#msg{display:none;position:relative;margin:14px auto 0;max-width:600px;padding:12px;color:#b4ffd1;font-size:17px;font-weight:bold;letter-spacing:1px}#state,#out{display:none}#wrap{position:relative;z-index:2;max-width:790px;margin:12px auto 25px}body.done #spin,body.fail #spin,body.done .progress-track,body.fail .progress-track{display:none}body.done #msg,body.fail #msg{display:block}body.fail #msg{color:#ffaeae}body.done .loading-title{color:#9bffbd}body.fail .loading-title{color:#ffc3c3}
+body.log .stage{min-height:0}body.log #spin,body.log #msg{display:none}body.log #state{display:block;color:#9dffc1;font-size:19px;font-weight:bold;margin:12px 14px}body.log #out{display:block;max-height:38vh;overflow:auto;text-align:left;margin:0 14px;padding:12px;border:1px solid #286b45;background:#04120d;color:#b7e9c6;font:12px/1.5 Consolas,monospace;white-space:pre-wrap}.notice{margin:12px;padding:10px;border:1px solid #ff7777;background:#351616;color:#ffb4b4;font-weight:bold}.ok{color:#83f4a9}.bad{color:#ff8b8b}.warn{color:#ffe096}code{color:#9ceeb7}
+.byline{position:relative;z-index:2;margin:18px auto 12px;text-align:center;color:#5d9b72;font:11px Consolas,monospace;letter-spacing:2px}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes travel{0%{transform:translateX(-130%)}100%{transform:translateX(400%)}}
+@media(max-width:540px){#brand{padding-top:17px}#brand b{font-size:25px;letter-spacing:1px}.stage{width:94%;padding:20px 10px;min-height:370px}#ramBox{margin-left:3%;margin-right:3%}.loading-title{font-size:18px}}
+</style>
+</head>
+<body>
+<header id="brand"><b>GOLDHEN</b><small>PS4 · CARGADOR</small><span class="fw">FIRMWARE 14.00</span></header>
+<main class="stage">
+<div id="spin" aria-label="Cargando"></div>
+<div class="loading-title">Iniciando GoldHEN</div>
+<div class="loading-sub">Preparando el exploit para tu PS4...</div>
+<div class="progress-track"><div class="progress-glow"></div></div>
+<div class="status">NO APAGUES LA CONSOLA</div>
+<div id="msg">Reinicia tu consola</div>
+</main>
+<div id="ramBox">RAM: comprobando...</div>
+<div id="wrap"><div id="state"></div><div id="out"></div></div>
+<p class="byline">PS4 · FIRMWARE 14.00</p>
+<script type="module">import "./jb.js";</script>
+</body>
+</html>
