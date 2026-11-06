@@ -1,13 +1,4 @@
-# VIDEOGAMESSCZ PS4 HOST 14.00 — ZIP AUTOCONTENIDO
-
-**Todo incluido**: interfaz zombie, motor Afterglow, GoldHEN, patchset 14.00 y dependencias JavaScript. No se redirige a hosts externos.
-
-## Uso
-1. Extraer el ZIP y subir **el contenido**, no la carpeta contenedora, a la raíz del repositorio de GitHub Pages.
-2. Activar Settings > Pages > Deploy from a branch > main / root.
-3. Abrir la URL de GitHub Pages en el navegador de la PS4 14.00 y pulsar **Lanzar GoldHEN**.
-4. Payloads y FTP: «No disponible de momento».
-
+# 
 El botón principal ejecuta el mismo flujo `start()` de `launch.js` del autor, preseleccionando GoldHEN y navegando a `jb.html?log=1&afterglow=run&mode=goldhen`. Se mantiene la comprobación de referrer del motor. No se ha probado físicamente en una PS4. No garantiza éxito: puede colgarse y requerir reinicio. No cierres el navegador si informa de handles no desactivados; sigue las advertencias del README original.
 
 ## Licencias y créditos
